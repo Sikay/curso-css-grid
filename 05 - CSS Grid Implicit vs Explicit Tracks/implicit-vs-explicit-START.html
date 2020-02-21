@@ -14,11 +14,17 @@
     <div class="item">2</div>
     <div class="item">3</div>
     <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
   </div>
 
   <style>
     .container {
       display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 100px 100px; /* Marcamos que las filas explicitas tengan 100px */
+      grid-auto-rows: 200px; /* Marcamos que las filas implicitos tengan un tamaño de 200px */
     }
   </style>
 </body>
