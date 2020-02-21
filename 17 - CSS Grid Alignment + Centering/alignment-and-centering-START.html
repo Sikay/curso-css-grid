@@ -70,8 +70,23 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(10, 100px);
+      grid-template-rows: repeat(5, 100px);
+      /* justify-items: center;
+      align-items: center; */
+      place-items: stretch stretch;
+      justify-content: space-around;
     }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: center;
+      align-self: center;
+    }
+
   </style>
 </body>
 
