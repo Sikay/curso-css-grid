@@ -163,6 +163,12 @@
     const html = gridGallery.map(generateImageGrid).join('');
     gallery.innerHTML = html;
 
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => item.addEventListener('click', open));
+
+    overlayClose.addEventListener('click', close);
+
     function generateImageGrid([columnSpan, rowSpan]) {
       return `
         <div class="item column-span-${columnSpan} row-span-${rowSpan}">
@@ -180,6 +186,16 @@
 
     function randomGridSection(maxGridSize, maxColumnSize, maxRowSize) {
       return Array.from({ length: maxGridSize }, () => [randomNumber(maxColumnSize), randomNumber(maxRowSize)]);
+    }
+
+    function open(event) {
+      const src = event.currentTarget.querySelector('img').src;
+      overlayImage.src = src;   
+      overlay.classList.add('open');  
+    }
+
+    function close() {
+      overlay.classList.remove('open');
     }
 
   </script>
