@@ -82,6 +82,39 @@
   </style>
 
   <script>
+    const gallery = document.querySelector('.gallery');
+    const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+    const overlayClose = overlay.querySelector('.close');
+    const imagesNumber = 12;
+    const maxColumnGrid = 4;
+    const maxRowGrid = 4;
+    const maxGrid = 50;
+
+    const gridGallery = randomGridSection(maxGrid, maxColumnGrid, maxRowGrid);
+
+    const html = gridGallery.map(generateImageGrid).join('');
+    gallery.innerHTML = html;
+
+    function generateImageGrid([columnSpan, rowSpan]) {
+      return `
+        <div class="item column-span-${columnSpan} row-span-${rowSpan}">
+          <img src="images/${randomNumber(imagesNumber)}.jpg">
+          <div class="item__overlay">
+            <button>View →</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function randomNumber(limit) {
+      return Math.floor(Math.random() * limit) + 1;
+    }
+
+    function randomGridSection(maxGridSize, maxColumnSize, maxRowSize) {
+      return Array.from({ length: maxGridSize }, () => [randomNumber(maxColumnSize), randomNumber(maxRowSize)]);
+    }
+
   </script>
 </body>
 
