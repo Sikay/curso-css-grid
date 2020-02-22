@@ -51,6 +51,32 @@ h6 {
   align-items: center;
 }
 
+.editor {
+  display: grid;
+  grid-auto-rows: auto 1fr;
+}
+
+.editor__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.editor__code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.editor__number {
+  display: block;
+}
+
+.editor__input {
+  border: 0;
+}
+
 .preview iframe {
   width: 100%;
   height: 100%;
