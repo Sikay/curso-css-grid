@@ -34,16 +34,11 @@ h6 {
   height: 100vh;
 }
 
-/* Visualizar los grids */
 .codepen >* {
-  border:1px solid black;
+  border:1px solid black; /* Visualizar los grids */
 }
 
-.code {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
+/* Header Pen */
 .pen {
   display: grid;
   grid-template-columns: 1fr;
@@ -51,9 +46,18 @@ h6 {
   align-items: center;
 }
 
+/* Section code */
+
+.code {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #1b2b34;
+}
+
 .editor {
   display: grid;
   grid-auto-rows: auto 1fr;
+  color: white;
 }
 
 .editor__header {
@@ -62,6 +66,7 @@ h6 {
   align-items: center;
   gap: 5px;
   padding: 5px;
+  background: rgba(0,0,0,0.1);
 }
 
 .editor__code {
@@ -71,11 +76,19 @@ h6 {
 
 .editor__number {
   display: block;
+  padding: 0 10px;
 }
 
 .editor__input {
   border: 0;
+  resize: none;
+  color: grey;
+  background: none;
+  font-size: 15px;
+  line-height: 20px;
 }
+
+/* Section Preview */
 
 .preview iframe {
   width: 100%;
