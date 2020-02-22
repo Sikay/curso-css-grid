@@ -19,7 +19,14 @@
   </div>
 
   <style>
-    .stacked {}
+
+    /* Este ejemplo solo se puede hacer con flexbox ya que grid es demasiado "rigido", no permite filas de distintos tamaños */
+
+    .stacked {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
     .stacked>* {
       width: 30%;

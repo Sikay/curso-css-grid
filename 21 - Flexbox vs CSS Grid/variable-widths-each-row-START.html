@@ -21,10 +21,17 @@
     <div class="item">Short</div>
   </div>
   <style>
-    .flex-container {}
+
+    /* Este caso seria mucho mas complicado con css grid ya que tendrias que utilizar un template area y no quedaria igual solo similar */
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .flex-container>* {
       margin: 10px;
+      flex: 1;
     }
   </style>
 </body>

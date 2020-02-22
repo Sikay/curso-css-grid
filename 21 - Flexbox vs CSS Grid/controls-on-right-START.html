@@ -48,14 +48,31 @@
       <button>⭐</button>
       <button>❤️</button>
       <button>❌</button>
+      <button>⭐</button>
+      <button>❤️</button>
+      <button>❌</button>
     </div>
   </div>
   <style>
+
+    /* En el caso de flexbox tendriamos que controlar un elemento mas */
+
     .track {
       background: white;
       padding: 10px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: column;
+      /*display: flex;*/
     }
+
+    /*
+    .track h2 {
+      flex: 1;
+    }
+    */
+
   </style>
 </body>
 

@@ -24,7 +24,23 @@
   </div>
 
   <style>
-    .unknown {}
+
+    /* Flexbox en el momento que salte de fila ocupara todos los espacios por lo que tendra elementos de diferentes tamaños, grid mantendra los tamaños con el salto de linea */
+
+    .unknown {
+      /*display: flex;
+      flex-wrap: wrap;*/
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      gap: 20px;
+    }
+
+    /*
+    .item {
+      flex: auto;
+      margin: 0 10px 0 10px;
+    }
+    */
   </style>
 </body>
 
