@@ -35,7 +35,9 @@ img {
   justify-content: center;
   align-items: start;
   padding: 40px;
-  background: white;
+  background: white url(images/taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
 }
 
 .hero > * {
