@@ -12,3 +12,25 @@ img {
   max-width: 100%;
 }
 
+/* Top */
+
+.top {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+    "hero hero cta1"
+    "hero hero cta2"
+  ;
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.cta1 {
+  grid-area: cta1;
+}
+
+.cta2 {
+  grid-area: cta2;
+}
