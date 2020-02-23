@@ -102,6 +102,20 @@ img {
   gap: 20px;
 }
 
+.feature {
+  background: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.feature p {
+  color: grey;
+}
+
+.icon {
+  font-size: 50px;
+}
+
 /* About */
 
 .about {
