@@ -16,6 +16,11 @@ img {
   max-width: 100%;
 }
 
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
 /* Top */
 
 .top {
@@ -122,6 +127,8 @@ img {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  padding: 50px;
+  background: white;
 }
 
 /* Gallery */
