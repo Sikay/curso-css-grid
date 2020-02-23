@@ -1,3 +1,7 @@
+:root {
+  --orange: rgb(255, 187, 40);
+}
+
 body {
   font-size: 15px;
 }
@@ -25,6 +29,34 @@ img {
 
 .hero {
   grid-area: hero;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 40px;
+  background: white;
+}
+
+.hero > * {
+  background: var(--orange);
+  padding: 5px;
+}
+
+.cta {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background: var(--orange);
+}
+
+.cta > * {
+  margin: 0;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 200;
 }
 
 .cta1 {
