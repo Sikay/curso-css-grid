@@ -147,18 +147,15 @@ img {
   gap: 20px;
 }
 
-.gallery h2:before {
+.gallery h2:before, .gallery h2:after {
   content: '';
   display: block;
   height: 10px;
-  background: linear-gradient(to left, var(--orange), transparent);
+  background: linear-gradient(to var(--direction, left), var(--orange), transparent);
 }
 
 .gallery h2:after {
-  content: '';
-  display: block;
-  height: 10px;
-  background: linear-gradient(to right, var(--orange), transparent);
+  --direction: right;
 }
 
 .gallery img {
