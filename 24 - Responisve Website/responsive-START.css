@@ -82,7 +82,7 @@ img {
 
 .menu ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
   list-style: none;
   padding: 0;
@@ -162,3 +162,28 @@ img {
   width: 100%;
 }
 
+@media (max-width: 1000px) {
+  .menu {
+    order: -1;
+  }
+
+  .menu ul {
+    display: none;
+  }
+
+  [aria-controls="menu-list"] {
+    display: block;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+}

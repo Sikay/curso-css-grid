@@ -102,6 +102,16 @@
   </div>
 
   <script>
+    const menuButton = document.querySelector('button[aria-controls="menu-list"]');
+    
+    menuButton.addEventListener('click', toggleMenu);
+
+    function toggleMenu(event) {
+      // Convertimos el valor del atributo en boolean
+      const expanded = event.target.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', !expanded);
+    }
+
   </script>
   
 </body>
