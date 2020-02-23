@@ -154,6 +154,19 @@
       font-weight: 100;
       margin: 0;
     }
+
+    .post {
+      display: grid;
+      max-width: 1000px;
+      margin: 200px auto;
+      grid-template-columns: 3fr 12fr 5fr; /* 15% 60% 25% */
+      gap: 10px 50px;
+    }
+
+    .post > * {
+      grid-column: 2 / span 1;
+    }
+
   </style>
 
 </body>
