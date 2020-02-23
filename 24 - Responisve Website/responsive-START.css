@@ -187,3 +187,18 @@ img {
     display: none;
   }
 }
+
+@media (max-width: 700px) {
+  .top {
+    grid-template-areas: 
+      "hero hero"
+      "hero hero"
+      "cta1 cta2"
+    ;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
