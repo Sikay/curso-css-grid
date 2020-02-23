@@ -78,9 +78,20 @@ img {
 .menu ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  gap: 20px;
+  gap: 10px;
   list-style: none;
   padding: 0;
+}
+
+.menu a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  background: var(--orange);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
 }
 
 /* Features */
